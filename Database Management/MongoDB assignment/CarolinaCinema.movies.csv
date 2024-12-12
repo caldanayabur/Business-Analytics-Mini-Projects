@@ -1,0 +1,11 @@
+_id,title,genres[0],genres[1],genres[2],runtime,rated,year,directors[0],directors[1],cast[0],cast[1],cast[2]
+671f212b15241efd47c33828,The Lord of the Rings,Fantasy,Adventure,,178,PG-13,2001,Peter Jackson,,Elijah Wood,Ian McKellen,Viggo Mortensen
+671f212b15241efd47c33829,Ratatouille,Animation,Comedy,Family,111,G,2007,Brad Bird,,Patton Oswalt,Ian Holm,Lou Romano
+671f212b15241efd47c3382a,Harry Potter,Fantasy,Adventure,,152,PG,2001,Chris Columbus,,Daniel Radcliffe,Rupert Grint,Emma Watson
+671f212b15241efd47c3382b,Narnia,Fantasy,Adventure,,140,PG,2005,Andrew Adamson,,William Moseley,Anna Popplewell,Skandar Keynes
+671f212b15241efd47c3382c,The Hobbit,Fantasy,Adventure,,169,PG-13,2012,Peter Jackson,,Martin Freeman,Ian McKellen,Cate Blanchett
+671f212b15241efd47c3382d,Tarzan,Animation,Adventure,Family,88,G,1999,Chris Buck,Kevin Lima,Tony Goldwyn,Glenn Close,Minnie Driver
+671f212b15241efd47c3382e,Mulan,Animation,Action,Adventure,88,PG,1998,Tony Bancroft,Barry Cook,Ming-Na Wen,Eddie Murphy,BD Wong
+671f212b15241efd47c3382f,Pirates of the Caribbean,Adventure,Fantasy,,143,PG-13,2003,Gore Verbinski,,Johnny Depp,Geoffrey Rush,Orlando Bloom
+671f212b15241efd47c33830,Avatar,Science Fiction,Action,Adventure,162,PG-13,2009,James Cameron,,Sam Worthington,Zoe Saldana,Sigourney Weaver
+671f212b15241efd47c33831,The Pursuit of Happyness,Drama,Biography,,118,PG-13,2006,Gabriele Muccino,,Will Smith,Jaden Smith,Thandiwe Newton

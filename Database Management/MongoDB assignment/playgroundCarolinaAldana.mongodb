@@ -1,0 +1,151 @@
+// Create Documents for Concessions collection.
+use('test');
+db.concessions.insertOne(
+    {
+        "name": "Empanada", "price": 8
+    }
+);
+
+// Create Documents for Events collection.
+use('test');
+db.events.insertOne(
+    {
+        "name": "Short Film Night", 
+        "description": "An evening showcasing a selection of diverse short films.", 
+        "price": 500
+    }
+);
+
+// Create Documents for Movie collection.
+use('test');
+db.movies.insertOne(
+    {
+        "title": "Charlie and the Chocolate Factory",
+        "genres": ["Fantasy", "Family"],
+        "runtime": 115,
+        "rated": "PG",
+        "year": 2005,
+        "directors": ["Tim Burton"],
+        "cast": ["Johnny Depp", "Freddie Highmore", "Helena Bonham Carter"]
+    }
+);
+
+// Create Documents for Payment collection.
+use('test');
+db.payment.insertOne(
+    {
+        "name": "Coins", "fee": 0
+    }
+);
+
+// Read Documents for Concessions collection.
+use('test');
+db.concessions.findOne(
+    {
+        "price": 7, "name": "Large Soda"
+    }
+);
+
+// Read Documents for Events collection.
+use('test');
+db.events.findOne(
+    {
+        "name": "Proposals", "price": 3000
+    }
+);
+
+// Read Documents for Movie collection.
+use('test');
+db.movies.findOne(
+    {
+        "directors": "Peter Jackson",
+        "year": 2001,
+    }
+);
+
+// Read Documents for Payment collection.
+use('test');
+db.payment.findOne(
+    {
+        "name": "Gift Card", "fee": 0
+    }
+);
+
+// Update Documents for Concessions collection.
+use('test');
+db.concessions.updateOne(
+    { "name" : "Hamburger"},
+    { $inc: { "price": 3}}
+);
+
+// Update Documents for Events collection.
+use('test');
+db.events.updateOne(
+    { "name" : "Proposals"},
+    { $inc: { "price": 40}}
+);
+
+// Update Documents for Movie collection.
+use('test');
+db.movies.updateOne(
+    { "title" : "Tarzan"},
+    { $inc: { "runtime": 12}}
+);
+
+// Update Documents for Payment collection.
+use('test');
+db.payment.updateOne(
+    { "name" : "Credit Card"},
+    { $inc: { "fee": 2}}
+);
+
+// Delete Documents for Concessions collection.
+use('test');
+db.concessions.deleteOne(
+    { "name" : "Small Popcorn Bowl"}
+);
+
+// Delete Documents for Events collection.
+use('test');
+db.events.deleteOne(
+    { "description" : "Commemorative events for milestones like wedding anniversaries or company anniversaries."}
+);
+
+// Delete Documents for Movie collection.
+use('test');
+db.movies.deleteOne(
+    { "title" : "Pirates of the Caribbean"}
+);
+
+// Delete Documents for Payment collection.
+use('test');
+db.payment.deleteOne(
+    { "name" : "Paze"}
+);
+
+use('test');
+db.concessions.aggregate([
+    { $match: { price: { $gt: 5 } } },
+    { $group: { _id: "$name", totalPrice: { $sum: "$price" } } }
+])
+
+use('test');
+db.events.aggregate([
+    { $match: { price: { $gt: 1000 } } },
+    { $group: { _id: "$name", totalPrice: { $sum: "$price" } } }
+])
+
+use('test');
+db.movies.aggregate([
+    { $match: { runtime: { $gt: 120 } } },
+    { $unwind: "$genres" },
+    { $group: { _id: "$genres", count: { $sum: 1 } } }
+])
+
+use('test');
+db.payment.aggregate([
+    { $match: { fee: { $gt: 0 } } },
+    { $group: { _id: "$name", totalFee: { $sum: "$fee" } } }
+])
+
+
